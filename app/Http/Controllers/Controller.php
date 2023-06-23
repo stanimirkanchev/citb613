@@ -16,4 +16,12 @@ class Controller extends BaseController
         $rooms = Room::all();
         return view('home')->with('rooms', $rooms);
     }
+    public function questions()
+    {
+        return view('questions');
+    }
+    public function contacts()
+    {
+        return view('contacts');
+    }
 }

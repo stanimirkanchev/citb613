@@ -54,6 +54,20 @@ body {
         padding: 0 16px;
     }
 }
+img {
+    max-width:100%;
+}
+strong {
+    font-weight: 600;
+}
+.logo {
+    max-width:200px;
+    height: auto;
+    margin: 0 auto;
+    @media all and (max-width: 992px) {
+        margin: 0 auto 0 0;
+    }
+}
 .main-nav {
     display: block;
     margin-bottom: 24px;
@@ -80,20 +94,6 @@ body {
             color: $chocolate;
             border: 2px solid $chocolate;
         }
-    }
-}
-img {
-    max-width:100%;
-}
-strong {
-    font-weight: 600;
-}
-.logo {
-    max-width:200px;
-    height: auto;
-    margin: 0 auto;
-    @media all and (max-width: 992px) {
-        margin: 0 auto 0 0;
     }
 }
 form {
@@ -190,8 +190,8 @@ form {
             display:flex;
             flex-flow:row wrap;
             margin-bottom:15px;
-            background:#fff;
-            color: #000;
+            background: $camel;
+            color: #fff;
             box-shadow:0px 2px 15px #000;
             border-radius:8px;
             .image {
@@ -212,8 +212,10 @@ form {
                 }
             }
             .content {
+                display: flex;
+                flex-direction: column;
                 width:100%;
-                padding:50px;
+                padding:24px 50px;
                 @media all and (min-width: 768px) {
                     width:calc(100% - 350px);
                 }
@@ -230,11 +232,15 @@ form {
                     font-size:25px;
                     line-height:1.5;
                     font-weight:bold;
+                    margin: 0;
                     margin-bottom:15px;
                 }
                 a {
                     display: inline-block;
-                    background: green;
+                    background: $chocolate;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 600;
                     color:#fff;
                     text-decoration: none;
                     padding: 10px 30px;
@@ -448,4 +454,30 @@ form {
     font-size:16px;
     background: lightcoral;
     color: #000;
+}
+.questions {
+    .questions-wrapper {
+        padding: 48px 24px;
+        background: $camel;
+        .questions-item {
+            margin-bottom:24px;
+            .question {
+                font-weight: 600;
+                border-bottom: 1px solid $chocolate;
+                padding-bottom:8px;
+                font-size: 24px;
+            }
+            .answer {
+                padding-top: 8px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.contacts {
+    .contacts-wrapper {
+        padding: 48px 24px;
+        background: $camel;
+    }
 }

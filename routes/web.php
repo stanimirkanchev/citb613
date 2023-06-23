@@ -29,6 +29,8 @@ Route::POST('logout', [AuthController::class, 'logout'])->name('auth.logout');
 |
 */
 Route::GET('/', [Controller::class, 'index'])->name('home');
+Route::GET('/questions', [Controller::class, 'questions'])->name('questions');
+Route::GET('/contacts', [Controller::class, 'contacts'])->name('contacts');
 Route::GET('/rooms', [RoomsController::class, 'index'])->name('rooms.index');
 Route::GET('/room/{room}', [RoomsController::class, 'show'])->name('rooms.show');
 
